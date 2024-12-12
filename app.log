@@ -1,0 +1,63 @@
+
+      2024-12-12T12:31:57.928Z - 
+      Méthode: GET 
+      URL: /users/getAllUsersByDateX 
+      IP: ::1 
+      Adresse MAC: Erreur lors de la récupération de l'adresse MAC 
+      Referer: N/A 
+      Statut: 200 
+      Utilisateur: N/A 
+      Headers: {"content-type":"application/json","user-agent":"PostmanRuntime/7.43.0","accept":"*/*","postman-token":"c9313600-c961-4037-be4a-ca1f1d1141d9","host":"localhost:5000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"91"} 
+      Temps d'exécution: 16 ms 
+      Corps de la requête: {"username":"yeser","password":"123456789","date":"2024-12-12"} 
+      Résultat: N/A
+    
+      2024-12-12T12:32:47.149Z - 
+      Méthode: GET 
+      URL: /users/getAllUsersByDateX 
+      IP: ::1 
+      Adresse MAC: Erreur lors de la récupération de l'adresse MAC 
+      Referer: N/A 
+      Statut: 200 
+      Utilisateur: N/A 
+      Headers: {"content-type":"application/json","user-agent":"PostmanRuntime/7.43.0","accept":"*/*","postman-token":"312ab91c-e65c-491d-a842-1907246eca06","host":"localhost:5000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"91"} 
+      Temps d'exécution: 14 ms 
+      Corps de la requête: {"username":"yeser","password":"123456789","date":"2024-12-12"} 
+      Résultat: N/A
+    
+      2024-12-12T12:35:21.530Z - 
+      Méthode: GET 
+      URL: /users/getAllUsersByDateX 
+      IP: ::1 
+      Referer: N/A 
+      Statut: 200 
+      Utilisateur: N/A 
+      Headers: {"content-type":"application/json","user-agent":"PostmanRuntime/7.43.0","accept":"*/*","postman-token":"8f0a8c1c-0987-4b1e-8ec3-5c74a901f573","host":"localhost:5000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"91"} 
+      Temps d'exécution: 14 ms 
+      Corps de la requête: {"username":"yeser","password":"123456789","date":"2024-12-12"} 
+      Résultat: N/A
+    
+      2024-12-12T12:35:35.003Z - 
+      Méthode: GET 
+      URL: /users/getAllUsersByDateX 
+      IP: ::1 
+      Referer: N/A 
+      Statut: 200 
+      Utilisateur: N/A 
+      Headers: {"content-type":"application/json","user-agent":"PostmanRuntime/7.43.0","accept":"*/*","postman-token":"b38cdcd6-cc1e-471c-9e3f-4cb4962b1980","host":"localhost:5000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"91"} 
+      Temps d'exécution: 4 ms 
+      Corps de la requête: {"username":"yeser","password":"123456789","date":"2024-12-12"} 
+      Résultat: N/A
+    
+      2024-12-12T12:37:53.932Z - 
+      Méthode: GET 
+      URL: /os/osCpus 
+      IP: ::1 
+      Referer: N/A 
+      Statut: 200 
+      Utilisateur: N/A 
+      Headers: {"content-type":"application/json","user-agent":"PostmanRuntime/7.43.0","accept":"*/*","postman-token":"8975d076-b346-4453-be27-b36a3f54e37a","host":"localhost:5000","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"91"} 
+      Temps d'exécution: 5 ms 
+      Corps de la requête: {"username":"yeser","password":"123456789","date":"2024-12-12"} 
+      Résultat: N/A
+    

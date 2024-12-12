@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const http = require('http');
 const { connectToDb } = require('./db/db.js');
+// const logMiddleware = require('./middlewares/logMiddleware');
 
 require("dotenv").config()
 
@@ -20,6 +21,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// app.use(logMiddleware);
+
 
 app.use('/index', indexRouter);
 app.use('/users', usersRouter);
