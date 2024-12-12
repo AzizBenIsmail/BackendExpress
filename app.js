@@ -10,7 +10,7 @@ require("dotenv").config()
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const osRouter = require('./routes/osRouter.js');
+const osRouter = require('./routes/osRouter')
 
 var app = express();
 
