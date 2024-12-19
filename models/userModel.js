@@ -4,14 +4,17 @@ const dateFilterPligin = require("../plugin/dateFilterPligin");
 const userSchema = new mongoose.Schema(
   {
     username: { type : String , unique : true},
+    firstName: String,
+    lastName: String,
     password: String,
     role: {
       type: String,
-      enum: ["admin", "user"],
+      enum: ["admin", "client"],
     },
     dateExp: Date,
     image_user: { type: String, required: false, default: "client.png" },
     cv: { type: String, required: false },
+    cars : [{ type: mongoose.Schema.Types.ObjectId , ref:'Car'}]  
   },
   { timestamps: true }
 );
