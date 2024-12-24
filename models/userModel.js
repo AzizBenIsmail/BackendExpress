@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const dateFilterPligin = require("../plugin/dateFilterPligin");
 const userSchema = new mongoose.Schema(
   {
-    username: { type : String , unique : true},
+    username: { type: String, unique: true },
     firstName: String,
     lastName: String,
     password: String,
@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema(
     dateExp: Date,
     image_user: { type: String, required: false, default: "client.png" },
     cv: { type: String, required: false },
-    cars : [{ type: mongoose.Schema.Types.ObjectId , ref:'Car'}]  
+    cars: [{ type: mongoose.Schema.Types.ObjectId, ref: "Car" }],
   },
   { timestamps: true }
 );
@@ -50,6 +50,18 @@ userSchema.post("save", function (doc, next) {
 //     }
 //   })
 // }
+
+userSchema.statics.login = async function (username, password) {
+  const user = await this.findOne({ username });
+  if (user) {
+    const auth = await bcrypt.compare(password, user.password);
+    if (auth) {
+      // if (user.etat === true && user.archive === false) {
+        return user;
+      /* }else{throw new Error('compte desactive ou archive')} */
+    }
+  }
+};
 
 userSchema.plugin(dateFilterPligin);
 

@@ -68,7 +68,7 @@ module.exports.updateCar = async (req, res) => {
 module.exports.affectation = async (req, res) => {
     try {
       const { idCar , idOwner } = req.body;
-
+    // conster idOwner res.session.user._id 
       const car = await Car.findByIdAndUpdate(idCar, { owner: idOwner }, { new: true });
 
       await User.findByIdAndUpdate(idOwner, { $push: { cars: idCar } });

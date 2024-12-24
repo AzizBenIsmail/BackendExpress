@@ -6,7 +6,7 @@ var logger = require('morgan');
 const http = require('http');
 const { connectToDb } = require('./db/db.js');
 // const logMiddleware = require('./middlewares/logMiddleware');
-
+const session = require('express-session');
 require("dotenv").config()
 
 var indexRouter = require('./routes/index');
@@ -16,7 +16,6 @@ const carRouter = require('./routes/carRouter.js')
 
 var app = express();
 
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -24,6 +23,16 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use(logMiddleware);
+
+app.use(session({
+  secret : 'net militaire secret',
+  resave : false,
+  saveUninitialized : true,
+  cookie: {
+    secure: false,
+    maxAge: 24 *60 *60 *1000
+  }
+}))
 
 
 app.use('/index', indexRouter);
