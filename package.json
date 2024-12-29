@@ -21,6 +21,7 @@
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.16",
     "nodemon": "^3.1.7",
+    "oracledb": "^6.7.1",
     "yup": "^1.6.1"
   }
 }
