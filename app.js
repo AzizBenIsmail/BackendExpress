@@ -8,7 +8,7 @@ const { connectToDb } = require('./db/db.js');
 // const logMiddleware = require('./middlewares/logMiddleware');
 const session = require('express-session');
 require("dotenv").config()
-
+const cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/usersRouter.js');
 const osRouter = require('./routes/osRouter')
@@ -34,6 +34,12 @@ app.use(session({
   }
 }))
 
+app.use(cors({
+    origin : process.env.origin_Front,
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Credentials',
+    credentials: true
+}))
 
 app.use('/index', indexRouter);
 app.use('/users', usersRouter);
